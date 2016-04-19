@@ -360,7 +360,7 @@ namespace YasuoBuddy.EvadePlus
                         ChampionName = "Braum",
                         SpellName = "BraumQ",
                         Slot = SpellSlot.Q,
-                        Delay = 30000,
+                        Delay = 250,
                         Range = 1000,
                         Radius = 100,
                         MissileSpeed = 1200,
@@ -2801,31 +2801,14 @@ namespace YasuoBuddy.EvadePlus
                     {
                         DisplayName = "Steel Tempest (tornado)",
                         ChampionName = "Yasuo",
-                        SpellName = "yasuoq3w",
+                        SpellName = "YasuoQ3/disabled",
                         Slot = SpellSlot.Q,
                         Delay = 400,
                         Range = 1150,
                         Radius = 90,
                         MissileSpeed = 1500,
                         DangerValue = 3,
-                        MissileSpellName = "yasuoq3w"
-                    }
-                },
-                new LinearMissileSkillshot()
-                {
-                    SpellData = new SpellData
-                    {
-                        DisplayName = "Steel Tempest 1",
-                        ChampionName = "Yasuo",
-                        SpellName = "yasuoq",
-                        Slot = SpellSlot.Q,
-                        Delay = 400,
-                        Range = 550,
-                        Radius = 40,
-                        MissileSpeed = 0,
-                        DangerValue = 2,
-                        IsDangerous = true,
-                        MissileSpellName = "yasuoq"
+                        MissileSpellName = "YasuoQ3Mis"
                     }
                 },
                 new LinearMissileSkillshot()
@@ -2843,6 +2826,23 @@ namespace YasuoBuddy.EvadePlus
                         DangerValue = 2,
                         IsDangerous = true,
                         MissileSpellName = "yasuoq2"
+                    }
+                },
+                new LinearMissileSkillshot()
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "Steel Tempest 1",
+                        ChampionName = "Yasuo",
+                        SpellName = "yasuoq",
+                        Slot = SpellSlot.Q,
+                        Delay = 400,
+                        Range = 550,
+                        Radius = 40,
+                        MissileSpeed = 0,
+                        DangerValue = 2,
+                        IsDangerous = true,
+                        MissileSpellName = "yasuoq"
                     }
                 },
                 new LinearMissileSkillshot
@@ -3023,6 +3023,108 @@ namespace YasuoBuddy.EvadePlus
                         DangerValue = 5,
                         IsDangerous = true,
                         MissileSpellName = "ZyraBrambleZone"
+                    }
+                },
+                new LinearMissileSkillshot
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "Tentacle Smash",
+                        ChampionName = "Illaoi",
+                        SpellName = "IllaoiQ",
+                        Slot = SpellSlot.Q,
+                        Delay = 750,
+                        Range = 850,
+                        Radius = 100,
+                        MissileSpeed = 0,
+                        DangerValue = 3,
+                        IsDangerous = true,
+                        MissileSpellName = "illaoiemis"
+                    }
+                },
+                new LinearMissileSkillshot
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "Test of Spirit",
+                        ChampionName = "Illaoi",
+                        SpellName = "IllaoiE",
+                        Slot = SpellSlot.E,
+                        Delay = 250,
+                        Range = 950,
+                        Radius = 50,
+                        MissileSpeed = 1900,
+                        DangerValue = 3,
+                        IsDangerous = true,
+                        MissileSpellName = "illaoiemis"
+                    }
+                },
+                new LinearMissileSkillshot
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "End of the Line",
+                        ChampionName = "Graves",
+                        SpellName = "GravesQLineSpell",
+                        Slot = SpellSlot.Q,
+                        Delay = 250,
+                        Range = 808,
+                        Radius = 40,
+                        MissileSpeed = 3000,
+                        DangerValue = 2,
+                        IsDangerous = false,
+                        MissileSpellName = "GravesQLineMis"
+                    }
+                },
+                new LinearMissileSkillshot
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "Hammer Shock",
+                        ChampionName = "Poppy",
+                        SpellName = "PoppyQ",
+                        Slot = SpellSlot.Q,
+                        Delay = 500,
+                        Range = 430,
+                        Radius = 100,
+                        MissileSpeed = 0,
+                        DangerValue = 2,
+                        IsDangerous = false,
+                        MissileSpellName = "PoppyQ"
+                    }
+                },
+                new LinearMissileSkillshot
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "Deadly Flourish",
+                        ChampionName = "Jhin",
+                        SpellName = "JhinW",
+                        Slot = SpellSlot.W,
+                        Delay = 250,
+                        Range = 3000,
+                        Radius = 40,
+                        MissileSpeed = 5000,
+                        DangerValue = 2,
+                        IsDangerous = false,
+                        MissileSpellName = "JhinWMissile"
+                    }
+                },
+                new LinearMissileSkillshot
+                {
+                    SpellData = new SpellData
+                    {
+                        DisplayName = "Curtain Call",
+                        ChampionName = "Jhin",
+                        SpellName = "JhinRShot",
+                        Slot = SpellSlot.R,
+                        Delay = 250,
+                        Range = 3500,
+                        Radius = 80,
+                        MissileSpeed = 5000,
+                        DangerValue = 2,
+                        IsDangerous = false,
+                        MissileSpellName = "JhinRShotMis"
                     }
                 }
             };
