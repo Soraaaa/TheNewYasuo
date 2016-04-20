@@ -24,7 +24,7 @@ namespace YasuoBuddy.TargetedSpells
                 new TargetSpellData("Brand", "brandconflagrationmissile", SpellSlot.E),
                 new TargetSpellData("Kayle", "judicatorreckoning", SpellSlot.Q),
                 new TargetSpellData("Pantheon", "PantheonQ", SpellSlot.Q),
-                new TargetSpellData("Taric", "Dazzle", SpellSlot.Q),
+                //new TargetSpellData("Taric", "Dazzle", SpellSlot.Q),
                 new TargetSpellData("TwistedFate", "GoldCardAttack", SpellSlot.W),
                 new TargetSpellData("Viktor", "viktorpowertransfer", SpellSlot.Q),
                 new TargetSpellData("Ahri", "ahrifoxfiremissiletwo", SpellSlot.W),
