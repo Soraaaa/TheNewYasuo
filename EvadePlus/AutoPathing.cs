@@ -37,7 +37,7 @@ namespace YasuoBuddy.EvadePlus
 
         public static float SwitchDistance
         {
-            get { return (Game.Ping)*Player.Instance.MoveSpeed/1000 + 90; }
+            get { return (Game.Ping) * Player.Instance.MoveSpeed / 1000 + 90; }
         }
 
         static AutoPathing()
@@ -99,7 +99,7 @@ namespace YasuoBuddy.EvadePlus
 
         public static Vector2[] CleanPath(Vector2[] path, float tolerance = 100)
         {
-            var cleanPath = new List<Vector2> {path.First()};
+            var cleanPath = new List<Vector2> { path.First() };
             for (var i = 1; i < path.Length - 1; i++)
             {
                 if (path[i].Distance(cleanPath.Last(), true) > tolerance.Pow())
@@ -113,12 +113,12 @@ namespace YasuoBuddy.EvadePlus
 
         public static void DoPath(Vector2 end)
         {
-            DoPath(new[] {end});
+            DoPath(new[] { end });
         }
 
         public static bool ReachedPoint(Vector2 point)
         {
-            const int compareDistance = 80*80;
+            const int compareDistance = 80 * 80;
 
             for (var i = 0; i < Index; i++)
             {

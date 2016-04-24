@@ -73,7 +73,7 @@ namespace YasuoBuddy.EvadePlus
         public void AddSkillshot(EvadeSkillshot skillshot, bool isProcessSpell = false, bool triggerEvent = true)
         {
             if (LimitDetectionRange && !skillshot.SpellData.IsGlobal &&
-                skillshot.GetPosition().Distance(Player.Instance, true) > (2*skillshot.SpellData.Range).Pow())
+                skillshot.GetPosition().Distance(Player.Instance, true) > (2 * skillshot.SpellData.Range).Pow())
             {
                 return;
             }
@@ -197,7 +197,7 @@ namespace YasuoBuddy.EvadePlus
                     var nSkillshot = skillshot.NewInstance();
                     nSkillshot.SkillshotDetector = this;
                     nSkillshot.SpawnObject = sender;
-                    nSkillshot.Team = Utils.GetTeam(sender);
+                    nSkillshot.Team = Utils.GetGameObjectTeam(sender);
                     nSkillshot.OnCreate(sender);
 
                     if (IsValidTeam(nSkillshot.Team) && (EnableFoWDetection || !nSkillshot.IsFromFow()))

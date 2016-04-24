@@ -61,7 +61,7 @@ namespace YasuoBuddy.EvadePlus
                         if (start.Distance(center, true) < maxRange.Pow() &&
                             end.Distance(center, true) < maxRange.Pow())
                         {
-                            intersections = new[] {start, end}.ToList();
+                            intersections = new[] { start, end }.ToList();
                         }
                         else
                         {
@@ -93,17 +93,17 @@ namespace YasuoBuddy.EvadePlus
                 var dist = segment[0].Distance(segment[1]);
                 if (dist > maxdist)
                 {
-                    segment[0] = segment[0].Extend(segment[1], dist/2 - maxdist/2);
-                    segment[1] = segment[1].Extend(segment[1], dist/2 - maxdist/2);
+                    segment[0] = segment[0].Extend(segment[1], dist / 2 - maxdist / 2);
+                    segment[1] = segment[1].Extend(segment[1], dist / 2 - maxdist / 2);
                     dist = maxdist;
                 }
 
-                var step = maxdist/division;
-                var count = dist/step;
+                var step = maxdist / division;
+                var count = dist / step;
 
                 for (var i = 0; i < count; i++)
                 {
-                    var point = segment[0].Extend(segment[1], i*step);
+                    var point = segment[0].Extend(segment[1], i * step);
                     if (!point.IsWall())
                     {
                         points.Add(point);

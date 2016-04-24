@@ -17,13 +17,14 @@ namespace YasuoBuddy.TargetedSpells
             {
                 new TargetSpellData("Syndra", "syndrar", SpellSlot.R),
                 new TargetSpellData("VeigarR", "veigarprimordialburst", SpellSlot.R),
+                new TargetSpellData("Gragas", "Explosivecask", SpellSlot.R),
                 new TargetSpellData("Malzahar", "alzaharnethergrasp", SpellSlot.R),
                 new TargetSpellData("Caitlyn", "CaitlynAceintheHole", SpellSlot.R, 1000),
                 new TargetSpellData("Caitlyn", "CaitlynHeadshotMissile", SpellSlot.Unknown),
                 new TargetSpellData("Brand", "BrandWildfire", SpellSlot.R),
                 new TargetSpellData("Brand", "brandconflagrationmissile", SpellSlot.E),
                 new TargetSpellData("Kayle", "judicatorreckoning", SpellSlot.Q),
-                new TargetSpellData("Pantheon", "PantheonQ", SpellSlot.Q),
+                new TargetSpellData("Pantheon", "Pantheon_Throw", SpellSlot.Q),
                 //new TargetSpellData("Taric", "Dazzle", SpellSlot.Q),
                 new TargetSpellData("TwistedFate", "GoldCardAttack", SpellSlot.W),
                 new TargetSpellData("Viktor", "viktorpowertransfer", SpellSlot.Q),
@@ -38,7 +39,8 @@ namespace YasuoBuddy.TargetedSpells
                 new TargetSpellData("Baron", "BaronDeathBreathProj3", SpellSlot.Unknown),
                 new TargetSpellData("Baron", "BaronSpike", SpellSlot.Unknown),
                 new TargetSpellData("Leblanc", "LeblancChaosOrbM", SpellSlot.Q),
-                new TargetSpellData("Annie", "disintegrate", SpellSlot.Q),
+                new TargetSpellData("Annie", "Disintegrate", SpellSlot.Q),
+                new TargetSpellData("AurelionSol", "oscilacaoestekar", SpellSlot.Q),
                 new TargetSpellData("Twisted Fate", "GoldCardAttack", SpellSlot.W),
                 new TargetSpellData("Twisted Fate", "RedCardAttack", SpellSlot.W),
                 new TargetSpellData("Twisted Fate", "RedCardAttack", SpellSlot.W),
@@ -52,7 +54,7 @@ namespace YasuoBuddy.TargetedSpells
                 new TargetSpellData("Tristana", "ExplosiveCharge", SpellSlot.E),
                 new TargetSpellData("Cassiopeia", "CassiopeiaTwinFang", SpellSlot.E),
                 new TargetSpellData("Pantheon", "Pantheon_Throw", SpellSlot.Q),
-                new TargetSpellData("Akali", "AkaliMot", SpellSlot.Q),
+                new TargetSpellData("Akali", "AkaliMota", SpellSlot.Q),
                 new TargetSpellData("Leblanc", "LeblancChaosOrbM", SpellSlot.Q),
                 new TargetSpellData("Anivia", "Frostbite", SpellSlot.E),
                 new TargetSpellData("Fiddlesticks", "DarkWind", SpellSlot.E),
@@ -60,7 +62,7 @@ namespace YasuoBuddy.TargetedSpells
                 new TargetSpellData("Jhin", "DancingGrenade", SpellSlot.Q),
                 new TargetSpellData("Kindred", "MountingDread", SpellSlot.E),
                 new TargetSpellData("MissFortune", "MountingDread", SpellSlot.Q),
-                new TargetSpellData("Ryze", "Spell Flux", SpellSlot.E),
+                new TargetSpellData("Ryze", "SpellFlux", SpellSlot.E),
         };
             }
 

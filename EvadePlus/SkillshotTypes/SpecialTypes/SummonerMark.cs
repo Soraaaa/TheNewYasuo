@@ -61,7 +61,7 @@ namespace YasuoBuddy.EvadePlus.SkillshotTypes.SpecialTypes
 
         public override EvadeSkillshot NewInstance()
         {
-            var newInstance = new SummonerMark() {SpellData = SpellData};
+            var newInstance = new SummonerMark() { SpellData = SpellData };
             return newInstance;
         }
 
@@ -123,7 +123,7 @@ namespace YasuoBuddy.EvadePlus.SkillshotTypes.SpecialTypes
                 return;
             }
 
-            Utils.Draw3DRect(StartPosition, EndPosition, SpellData.Radius*2, Color.White);
+            Utils.Draw3DRect(StartPosition, EndPosition, SpellData.Radius * 2, Color.White);
         }
 
         public override Geometry.Polygon ToPolygon(float extrawidth = 0)
@@ -132,23 +132,18 @@ namespace YasuoBuddy.EvadePlus.SkillshotTypes.SpecialTypes
                 extrawidth += Player.Instance.BoundingRadius;
 
             return new Geometry.Polygon.Rectangle(StartPosition, EndPosition.ExtendVector3(StartPosition, -extrawidth),
-                SpellData.Radius*2 + extrawidth);
+                SpellData.Radius * 2 + extrawidth);
         }
 
-        public override int GetAvailableTime(AIHeroClient hero = null)
+        public override int GetAvailableTime(Vector2 pos)
         {
-            hero = hero ?? Player.Instance;
-
             var dist1 =
-                Math.Abs((EndPosition.Y - StartPosition.Y)*hero.ServerPosition.X -
-                         (EndPosition.X - StartPosition.X)*hero.ServerPosition.Y +
-                         EndPosition.X*StartPosition.Y - EndPosition.Y*StartPosition.X)/
-                (StartPosition.Distance(EndPosition));
+                Math.Abs((EndPosition.Y - StartPosition.Y) * pos.X - (EndPosition.X - StartPosition.X) * pos.Y +
+                         EndPosition.X * StartPosition.Y - EndPosition.Y * StartPosition.X) / (StartPosition.Distance(EndPosition));
 
-            var actualDist =
-                Math.Sqrt(StartPosition.Distance(hero.ServerPosition).Pow() - dist1.Pow());
+            var actualDist = Math.Sqrt(StartPosition.Distance(pos).Pow() - dist1.Pow());
 
-            var time = SpellData.MissileSpeed > 0 ? (int) ((actualDist/SpellData.MissileSpeed)*1000) : 0;
+            var time = SpellData.MissileSpeed > 0 ? (int)((actualDist / SpellData.MissileSpeed) * 1000) : 0;
 
             if (SpawnObject == null)
             {

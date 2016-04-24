@@ -5,7 +5,7 @@ namespace EvadePlus.SkillshotTypes.SpecialTypes
 {
     public class YasuoQ : LinearMissileSkillshot
     {
-        public override EvadeSkillshot NewInstance()
+        public override YasuoEvadeSkillshot NewInstance()
         {
             var newInstance = new YasuoQ() { SpellData = SpellData };
             return newInstance;
@@ -15,16 +15,6 @@ namespace EvadePlus.SkillshotTypes.SpecialTypes
         {
             _startPos = Caster.ServerPosition;
             _endPos = _startPos.ExtendVector3(CastArgs.End, -SpellData.Range);
-        }
-
-        public override void OnDraw()
-        {
-            if (!IsValid)
-            {
-                return;
-            }
-
-            Utils.Draw3DRect(StartPosition, EndPosition, SpellData.Radius*2, Color.White, 2, false);
         }
     }
 }
