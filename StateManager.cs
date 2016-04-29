@@ -179,7 +179,7 @@ namespace YasuoBuddy
 
         public static void AutoQ()
         {
-            foreach (var enemy in EntityManager.Heroes.Enemies.Where(a => a.Health > 0 && !a.IsDead && !a.IsZombie))
+            foreach (var enemy in EntityManager.Heroes.Enemies.Where(hero => hero.IsValidTarget(SpellManager.Q.Range) && !hero.IsDead && !hero.IsZombie))
             {
                 if (Player.Instance.HasWhirlwind() && !Yasuo.MiscSettings["Auto.Q3"].Cast<CheckBox>().CurrentValue)
                     return;
@@ -192,17 +192,17 @@ namespace YasuoBuddy
 
         public static void KillSteal()
         {
-            foreach (var enemy in EntityManager.Heroes.Enemies.Where(a => a.Health > 0 && !a.IsDead && !a.IsZombie))
-            {
-                if (Yasuo.MiscSettings["KS.Q"].Cast<CheckBox>().CurrentValue && SpellManager.Q.IsReady() && SpellManager.Q.IsInRange(enemy) && DamageHandler.QDamage(enemy) > enemy.Health)
-                {
-                    SpellManager.Q.Cast(enemy);
-                }
-                if (Yasuo.MiscSettings["KS.E"].Cast<CheckBox>().CurrentValue && SpellManager.E.IsReady() && SpellManager.E.IsInRange(enemy) && enemy.CanDash() && DamageHandler.EDamage(enemy) > enemy.Health)
-                {
-                    SpellManager.E.Cast(enemy);
-                }
-            }
+             foreach (var enemy in EntityManager.Heroes.Enemies.Where(hero => hero.IsValidTarget(SpellManager.Q.Range) && !hero.IsDead && !hero.IsZombie))
+             {
+                 if (Yasuo.MiscSettings["KS.Q"].Cast<CheckBox>().CurrentValue && SpellManager.Q.IsReady() && SpellManager.Q.IsInRange(enemy) && DamageHandler.QDamage(enemy) > enemy.Health)
+                 {
+                     SpellManager.Q.Cast(enemy);
+                 }
+                 if (Yasuo.MiscSettings["KS.E"].Cast<CheckBox>().CurrentValue && SpellManager.E.IsReady() && SpellManager.E.IsInRange(enemy) && enemy.CanDash() && DamageHandler.EDamage(enemy) > enemy.Health)
+                 {
+                     SpellManager.E.Cast(enemy);
+                 }
+             }  
         }
 
         public static void Jungle()
