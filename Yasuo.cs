@@ -50,9 +50,9 @@ namespace YasuoBuddy
             HarassMenu = Menu.AddSubMenu("Harass", "yasuHarass");
             HarassMenu.AddGroupLabel("Harass/Incomodar");
             HarassMenu.Add("harass.Q", new CheckBox("Use Q"));
-            HarassMenu.Add("harass.E", new CheckBox("Use E"));
             HarassMenu.Add("harass.stack", new CheckBox("Stack/Stackar Q"));
-
+            HarassMenu.Add("harass.Q3", new CheckBox("UseQ3"))
+            
             FarmMenu = Menu.AddSubMenu("Farming", "yasuoFarm");
             FarmMenu.AddGroupLabel("Farming");
             FarmMenu.AddLabel("Last Hit");
